@@ -5,8 +5,8 @@ WHERE CAR_ID IN (
     FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
     WHERE MONTH(START_DATE) BETWEEN 8 AND 10
     GROUP BY CAR_ID
-    HAVING count(*) >= 5)
-and month(start_date) between 8 and 10
-group by month, car_id
-having RECORDS > 0
-order by month asc, car_id desc
+    HAVING COUNT(*) >= 5)
+AND MONTH(START_DATE) BETWEEN 8 AND 10
+GROUP BY MONTH, CAR_ID
+HAVING RECORDS > 0
+ORDER BY MONTH, CAR_ID DESC;
