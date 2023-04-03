@@ -1,9 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
     public int[] solution(String[] name, int[] yearning, String[][] photo) {
-        List<Integer> list = new ArrayList<>();
+        int[] answer = new int[photo.length];
         for (int i=0; i<photo.length;i++){
             int cnt = 0;
             for(int j=0; j<photo[i].length; j++){
@@ -13,8 +10,8 @@ class Solution {
                     }
                 }
             }
-            list.add(cnt);
+            answer[i] = cnt;
         }
-        return list.stream().mapToInt(i -> i).toArray();
+        return answer;
     }
 }
