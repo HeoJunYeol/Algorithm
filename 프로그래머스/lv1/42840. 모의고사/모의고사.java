@@ -33,10 +33,10 @@ class Solution {
         List<Integer> answ = new ArrayList<Integer>();
         for(int i=0; i<answer.length; i++) if(max == answer[i]) answ.add(i+1);
         
-        int[] a = new int[answ.size()];
-        for(int i=0; i<a.length; i++){
-            a[i] = answ.get(i);
-        }
-        return a;
+        // int[] a = new int[answ.size()];
+        // for(int i=0; i<a.length; i++){
+        //     a[i] = answ.get(i);
+        // }
+        return answ.stream().mapToInt(i->i.intValue()).toArray();
     }
 }
