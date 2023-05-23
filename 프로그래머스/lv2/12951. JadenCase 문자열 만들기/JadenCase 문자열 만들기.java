@@ -1,12 +1,9 @@
 class Solution {
     public String solution(String s) {
-        if(s.length() == 0){
-            return " ";
-        }
-        String[] str = s.split(" ");
+        String[] str = s.toLowerCase().split(" ");
         StringBuffer answer = new StringBuffer();
         for (int i=0; i<str.length;i++) {
-            String tmp = str[i].toLowerCase();
+            String tmp = str[i];
             if(str[i].length() == 0) {
                 answer.append(" ");
             }
