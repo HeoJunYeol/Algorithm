@@ -1,22 +1,11 @@
 class Solution {
     public int solution(int n) {
         int answer =0;
-        int cnt =1;
-        while (cnt <= n){
-            int tmp =0;
-            for (int i=cnt; i<= n; i++){
-                tmp+=i;
-                if (tmp == n){
-                    answer++;
-                    break;
-                }
-                else if(tmp > n){
-                    break;
-                }
+        for (int i=1; i<=n; i+=2){
+            if (n % i == 0){
+                answer++;
             }
-            cnt++;
         }
-
         return answer;
     }
 }
