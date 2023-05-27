@@ -1,9 +1,9 @@
 class Solution {
     public int solution(int n) {
         int answer =n+1;
-        int cnt =Integer.toBinaryString(n).replace("0","").length();
+        int cnt =Integer.bitCount(n);
         while (true){
-            if((Integer.toBinaryString(answer).replace("0","").length()) == cnt){
+            if(Integer.bitCount(answer) == cnt){
                 break;
             }
             answer++;
