@@ -7,15 +7,15 @@ public class Main {
         while (t --> 0){
             int n = sc.nextInt();
             int[] nums = new int[n];
-            int evg = 0;
+            int avg = 0;
             for (int i=0; i<n; i++){
                 nums[i] = sc.nextInt();
-                evg += nums[i];
+                avg += nums[i];
             }
-            evg /= n;
+            avg /= n;
             int cnt = 0;
             for (int i=0; i<nums.length; i++){
-                if(evg < nums[i]){
+                if(avg < nums[i]){
                     cnt++;
                 }
             }
