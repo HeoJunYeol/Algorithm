@@ -8,20 +8,20 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        HashMap<String, String> hashMap = new HashMap<>();
+        Set<String> set = new HashSet<>();
         while (n --> 0){
             String[] s = br.readLine().split(" ");
             if (s[1].equals("enter")){
-                hashMap.put(s[0],s[1]);
+                set.add(s[0]);
             }
             else {
-                hashMap.remove(s[0]);
+                set.remove(s[0]);
             }
         }
-        List<String> key = new ArrayList<>(hashMap.keySet());
-        Collections.sort(key,Collections.reverseOrder());
-        for (String s: key){
-            System.out.println(s);
+        List<String> answer = new ArrayList<>(set);
+        Collections.sort(answer,Collections.reverseOrder());
+        for (String str: answer){
+            System.out.println(str);
         }
     }
 }
