@@ -10,11 +10,11 @@ public class Main {
         int T = Integer.parseInt(br.readLine());
         while (T--> 0){
             String[] str = br.readLine().split("");
-            System.out.println(s(str));
+            System.out.println(vps(str));
         }
     }
 
-    static String s(String[] str) {
+    static String vps(String[] str) {
         stack = new Stack<>();
         for(int i=0; i<str.length; i++){
             if (str[i].equals("(")){
